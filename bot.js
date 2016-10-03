@@ -1,4 +1,4 @@
-console.log("twitter follow bot starting");
+console.log("Daybreaks follow bot starting up.");
 
 const Twit = require('twit');
 const config = require('./config');
@@ -18,15 +18,13 @@ function followed(eventMsg) {
   console.log("follow event working");
   let name = eventMsg.source.name;
   let screenName = eventMsg.source.screen_name;
-  tweetIt(`I've already loved you in my mind @${screenName}. Thanks for the follow. Bum bum bum.`)
+  tweetIt(`Thanks for the follow @${screenName}! Check us out on @Spotify: http://bit.ly/td-sp
+`)
 }
 
-// post a tweet once a week 
-// setInterval(tweetIt, 1000*60*60*24*7)
 
 function tweetIt(txt) {
   let tweet = {
-    // status: '#helloDarlin'
     status: txt
   }
 
@@ -34,9 +32,9 @@ function tweetIt(txt) {
 
   function tweeted(err, data, repsonse) {
     if (err) {
-      console.log("something broke little darlin");
+      console.log("somethin broke. oops. ");
     } else {
-      console.log("it worked little darlin");
+      console.log("IT'S ALIIIIIIVE");
     }
   }
 }

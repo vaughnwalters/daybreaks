@@ -1,7 +1,7 @@
 {
-  "name": "conway",
+  "name": "thedaybreaks",
   "version": "1.0.0",
-  "description": "conway twitty twitterbot",
+  "description": "the daybreaks followbot",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "twit": "^2.2.5"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
