@@ -1,10 +1,17 @@
 console.log("Daybreaks follow bot starting up.");
 
 const Twit = require('twit');
-const config = require('./config');
 
-// key/secret/accesstoken/access token secret here, from the config.js. file
-let T = new Twit(config);
+// if I want to use the config.js file instead of hardcoding:
+// let T = new Twit(config);
+
+// Hide the key/tokens/secrets in the heroku config vars
+let T = new Twit({
+  consumer_key:         process.env.CONSUMER_KEY,
+  consumer_secret:      process.env.CONSUMER_SECRET,
+  access_token:         process.env.ACCESS_TOKEN,
+  access_token_secret:  process.env.ACCESS_TOKEN_SECRET
+});
 
 // set up a user stream
 let stream = T.stream('user');
