@@ -5,6 +5,7 @@ console.log("Daybreaks follow bot starting up.");
 const Twit = require('twit');
 
 // if I want to use the config.js file instead of hardcoding:
+// const config = require('./config');
 // let T = new Twit(config);
 
 // Hide the key/tokens/secrets in the heroku config vars
@@ -27,7 +28,7 @@ function followed(eventMsg) {
   console.log("follow event working");
   let name = eventMsg.source.name;
   let screenName = eventMsg.source.screen_name;
-  tweetIt(`Thanks for the follow @${screenName}! Check us out on @Spotify: http://bit.ly/td-sp
+  tweetIt(`Thanks for the follow @${screenName}!   Check us out on @Spotify: http://bit.ly/td-sp
 `)
 }
 
