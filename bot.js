@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("Daybreaks follow bot starting up.");
 
 const Twit = require('twit');
