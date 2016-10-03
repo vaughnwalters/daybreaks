@@ -28,7 +28,7 @@ function followed(eventMsg) {
   console.log("follow event working");
   let name = eventMsg.source.name;
   let screenName = eventMsg.source.screen_name;
-  tweetIt(`Thanks for the follow @${screenName}!   Check us out on @Spotify: http://bit.ly/td-sp
+  tweetIt(`Thanks for the follow @${screenName}! Check us out on @Spotify: http://bit.ly/td-sp
 `)
 }
 
